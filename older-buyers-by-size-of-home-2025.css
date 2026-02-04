@@ -1,0 +1,83 @@
+/* Montserrat Font */
+body {
+  background: #f4f6f8;
+  font-family: 'Montserrat', sans-serif;
+}
+
+/* Container */
+.chart-icons {
+  display: flex;
+  justify-content: center;
+  gap: 36px;
+}
+
+/* Each item */
+.item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 11px;
+  font-weight: 500;
+  text-align: center;
+}
+
+.item span {
+  margin-top: 6px;
+  color: #333;
+  max-width: 95px;
+  line-height: 1.2;
+}
+
+/* ===== MICRO HOUSE ICON ===== */
+.house {
+  width: 26px;
+}
+
+/* Roof */
+.roof {
+  width: 0;
+  height: 0;
+  border-left: 13px solid transparent;
+  border-right: 13px solid transparent;
+}
+
+/* Body */
+.body {
+  width: 100%;
+  height: 16px;
+  position: relative;
+  border-radius: 2px;
+}
+
+/* Door */
+.door {
+  width: 4px;
+  height: 8px;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  background: rgba(255, 255, 255, 0.85);
+  border-bottom: none;
+}
+
+/* ===== COLOR THEMES ===== */
+.sold .roof { border-bottom: 10px solid #006bb7; }
+.sold .body { background: #006bb7; }
+
+.purchased .roof { border-bottom: 10px solid #ff7f61; }
+.purchased .body { background: #ff7f61; }
+
+.difference .roof { border-bottom: 10px solid #077a8a; }
+.difference .body { background: #077a8a; }
+
+/* ===== MOBILE ===== */
+@media (max-width: 480px) {
+  .chart-icons { gap: 24px; }
+  .house { width: 20px; }
+  .roof { border-left: 10px solid transparent; border-right: 10px solid transparent; }
+  .sold .roof, .purchased .roof, .difference .roof { border-bottom-width: 8px; }
+  .body { height: 12px; }
+  .door { width: 3px; height: 6px; }
+  .item { font-size: 10px; }
+}
