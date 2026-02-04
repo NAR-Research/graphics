@@ -1,1 +1,1 @@
-# older-buyers-by-size-of-home-2025
+# graphics
