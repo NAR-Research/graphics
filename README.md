@@ -1,4 +1,4 @@
-### NAR's Statics and Interactive Graphics
+### NAR's Static and Interactive Graphics
 
 The NAR Research Team of the National Association of REALTORS® conducts statistical analysis and develops static graphics and interactive visualizations for its blogs, stories, and research reports.
 
