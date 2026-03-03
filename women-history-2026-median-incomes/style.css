@@ -1,0 +1,136 @@
+:root{
+  --bg:#ffffff;
+  --text:#111827;
+
+  /* bar colors */
+  --c-married:#0b6ea8;
+  --c-female:#a33aa2;
+  --c-male:#0b7a8a;
+  --c-unmarried:#ff7a5e;
+  --c-other:#0a3f73;
+
+  /* sizing (much smaller) */
+  --bar-h: 28px;
+  --radius: 7px;
+  --container-max: 860px;
+}
+
+*{ box-sizing:border-box; }
+
+body{
+  margin:0;
+  font-family: "Montserrat", system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji","Segoe UI Emoji";
+  background: var(--bg);
+  color: var(--text);
+}
+
+.wrap{
+  max-width: var(--container-max);
+  margin: 22px auto 34px;
+  padding: 0 18px;
+}
+
+h1{
+  margin: 0 0 14px;
+  font-size: 24px;
+  line-height: 1.15;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+}
+
+.row{
+  display:grid;
+  grid-template-columns: 165px 1fr;
+  gap: 12px;
+  align-items: center;
+  margin: 10px 0;
+}
+
+.label{
+  font-size: 14px;
+  font-weight: 700;
+  color: #1f2937;
+}
+
+.barTrack{
+  width:100%;
+  height: var(--bar-h);
+  border-radius: var(--radius);
+}
+
+.bar{
+  height: 100%;
+  border-radius: var(--radius);
+  display:flex;
+  align-items:center;
+  justify-content:flex-end;
+  padding-right: 10px;
+  min-width: 96px;
+}
+
+.value{
+  color: #fff;
+  font-size: 14px;
+  font-weight: 800;
+  letter-spacing: -0.01em;
+  white-space: nowrap;
+}
+
+/* colors */
+.bar--married{ background: var(--c-married); }
+.bar--female{ background: var(--c-female); }
+.bar--male{ background: var(--c-male); }
+.bar--unmarried{ background: var(--c-unmarried); }
+.bar--other{ background: var(--c-other); }
+
+/* <= 820px */
+@media (max-width: 820px){
+  h1{ font-size: 20px; }
+
+  .row{
+    grid-template-columns: 1fr;
+    gap: 8px;
+    margin: 10px 0;
+  }
+
+  .label{ font-size: 13px; }
+  .value{ font-size: 13px; }
+
+  :root{ --bar-h: 26px; }
+}
+
+/* <= 480px (extra small phones) */
+@media (max-width: 480px){
+  .wrap{
+    margin: 16px auto 26px;
+    padding: 0 14px;
+  }
+
+  h1{
+    font-size: 18px;
+    margin-bottom: 12px;
+  }
+
+  .row{
+    gap: 6px;
+    margin: 9px 0;
+  }
+
+  .label{
+    font-size: 12px;
+  }
+
+  :root{
+    --bar-h: 24px;
+    --radius: 6px;
+  }
+
+  .bar{
+    padding-right: 8px;
+    min-width: 84px;
+  }
+
+  .value{
+    font-size: 12px;
+  }
+}
