@@ -39,7 +39,7 @@ body {
   width: 100%;
   max-width: 900px;
   margin: 0 auto;
-  padding: 8px;
+  /* padding: 8px; */
 }
 
 .hero {
@@ -543,9 +543,9 @@ code {
 }
 
 @media (max-width: 560px) {
-  .embed-shell {
+  /* .embed-shell {
     padding: 6px;
-  }
+  } */
 
   .hero-inner {
     padding: 12px 10px 10px;
